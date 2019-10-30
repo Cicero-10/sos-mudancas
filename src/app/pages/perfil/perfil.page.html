@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p style="text-align: center; font-size: 18px; font-weight: 500;">Seus Dados</p>
+  <div class="perfil" style="box-shadow: .1em .1em .6em #ccc; margin: 5%;">
+    <div style="padding: 10px;">
+      <div>
+        <img src="./assets/img/users.png" alt="" style=" border-radius: 50%; max-width: 60px; border: 1px solid #000;">
+        <div style="float: right;">
+          <p style="font-size: 18px; font-weight: 500;">Mudar foto do perfil</p>
+        </div>
+      </div>
+      <p style="font-size: 18px; font-weight: 500;">Cicero Sousa</p>
+      <p style="font-size: 18px; font-weight: 500;">erivan.robertosousa@gmail.com <span style="float: right;" [routerLink]="['/email']"><img
+            src="assets/img/edit.png"></span></p>
+      <p style="font-size: 18px; font-weight: 500;">(61)99538-1679 <span style="float: right;" [routerLink]="['/telefone']"><img
+            src="assets/img/edit.png" alt=""></span></p>
+    </div>
+  </div>
+  <div style="padding: 10px;">
+    <!-- Expand -->
+    <ion-button expand="block" style="height: 50px!important;" color="dark"  [routerLink]="['/senha']">Atualizar senha</ion-button>
+  </div>
+
+</ion-content>

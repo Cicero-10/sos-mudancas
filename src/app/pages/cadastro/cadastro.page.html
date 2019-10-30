@@ -1,0 +1,26 @@
+<ion-content>
+  <ion-toolbar style=" --background: transparent;
+  --ion-color-base: transparent !important;">
+    <ion-buttons slot="start" style="color: #fff;">
+      <ion-back-button defaultHref="login"  text="VOLTAR"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="dark">
+    <div class="container ion-text-center">
+      <div>
+        <p style="color: #fff; margin-top: 50px; font-size: 22px;">Cadastro</p>
+      </div>
+      <div class="ion-padding ">
+        <div class="form">
+          <input type="text" placeholder="Nome" [(ngModel)]="user.nome">
+          <input type="email" placeholder="E-mail" [(ngModel)]="user.email">
+          <input type="tel" placeholder="Telefone" [(ngModel)]="user.telefone">
+          <input type="password" placeholder="Senha" [(ngModel)]="user.password">
+          <input type="password" placeholder="Confirmar senha">
+        </div>
+        <button class="ion-margin-top" color="light" expand="block" (click)="register()"> Criar conta</button>
+
+      </div>
+    </div>
+  </div>
+</ion-content>

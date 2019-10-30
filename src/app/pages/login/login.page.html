@@ -1,0 +1,19 @@
+<ion-content>
+  <div class="dark">
+    <div class="container ion-text-center">
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="">
+      </div>
+      <div class="ion-padding ">
+        <div class="form">
+          <input type="email" placeholder="E-mail" [(ngModel)]="userLogin.email">
+          <input type="password" placeholder="Senha" [(ngModel)]="userLogin.password">
+        </div>
+
+        <button class="ion-margin-top" (click)="login()" color="light" expand="block">Entrar</button>
+
+        <p>Não tem conta?<span [routerLink]="['/cadastro']">Cadastre-se</span></p>
+      </div>
+    </div>
+  </div>
+</ion-content>

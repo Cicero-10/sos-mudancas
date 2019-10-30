@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Resultado da busca</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="!prestadores.length">
+      <ion-item *ngFor="let item of [0, 1, 2]">
+        <ion-avatar slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  
+    <ion-list>
+      <ion-item-sliding *ngFor="let prestador of prestadores">
+        <ion-item button [routerLink]="['/details', prestador.id]">
+          <ion-avatar slot="start">
+            <img [src]="prestador.picture">
+          </ion-avatar>
+  
+          <ion-label>
+            {{ prestador.endereco }}
+            <p>{{ prestador.modelo_ano_veiculo }}</p>
+            <p>{{ prestador.createdAt | date: 'short' }}</p>
+          </ion-label>
+  
+          <ion-note color="primary" slot="end" *ngIf="prestador.preco_km">{{ prestador.preco_km*18 | currency: 'BRL'}}</ion-note>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-content>

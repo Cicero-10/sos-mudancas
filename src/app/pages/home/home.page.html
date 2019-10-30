@@ -1,0 +1,31 @@
+<ion-content>
+
+  <div #map>
+
+    <div class="">
+      <ion-toolbar color="light" style=" --background: transparent;
+          --ion-color-base: transparent !important; ">
+        <ion-buttons slot="start" style="color: #fff; background-color: #00a6ff;  border-radius: 50%; height: 40px; width: 40px;">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </div>
+
+
+    <ion-searchbar [(ngModel)]="search" (ionChange)="searchChange()" placeholder="Para onde?" [hidden]="destination" required>
+    </ion-searchbar>
+
+    <ion-button class="ion-padding-top" (click)="back()" color="dark" fill="clear" size="small" [hidden]="!destination">
+      <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+    </ion-button>
+
+    <ion-list class="ion-margin-horizontal" [hidden]="!search.length">
+      <ion-item (click)="calcRoute(result)" *ngFor="let result of searchResults">
+        {{ result.description }}
+      </ion-item>
+    </ion-list>
+  </div>
+  <div style="margin: 0; padding: 0; bottom: 0; position: absolute;">
+    <ion-button [routerLink]="['/busca']">Buscar</ion-button>
+  </div>
+</ion-content>

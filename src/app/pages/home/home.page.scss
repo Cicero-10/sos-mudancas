@@ -1,0 +1,43 @@
+.dark{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background:var( --ion-color-primary);
+}
+.topo{
+    height: 80%;
+}
+ion-toolbar{
+    --ion-toolbar-background-color: transparent;
+    --ion-toolbar-text-color: white;
+}
+.card{
+    ion-card{
+        background-color: #fff;
+    }
+}
+.botton{
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+}
+button{
+    height: 40px;
+    background-color:  #00a6ff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3% 20%;
+    margin-left: 22%;
+    margin-top: 30px;
+}
+
+ion-searchbar{
+    --background: #fff;
+}
+ion-list{
+    --background: #fff;
+   box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+
+}

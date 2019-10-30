@@ -1,0 +1,39 @@
+<ion-content>
+  <div class="dark">
+    <ion-buttons slot="start" style="color: #fff;">
+      <ion-back-button defaultHref="login" text="VOLTAR"></ion-back-button>
+    </ion-buttons>
+    <div class="container ion-text-center">
+      <div>
+        <p style="color: #fff; margin-top: 50px; font-size: 16px;">Cadastro Prestador de Serviços</p>
+      </div>
+      <div class="ion-padding ">
+        <div class="form">
+          <input type="text" placeholder="Ano e modelo do veículo" [(ngModel)]="prestador.modelo_ano_veiculo">
+          <input type="text" placeholder="Placa" [(ngModel)]="prestador.placa">
+          <ion-item>
+            <ion-label>Porte</ion-label>
+            <ion-select placeholder="Selecione" [(ngModel)]="prestador.porte" style="border-bottom: transparent;">
+              <ion-select-option value="Pequeno">Pequeno</ion-select-option>
+              <ion-select-option value="Medio">Médio</ion-select-option>
+              <ion-select-option value="Grande">Grande</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <input type="text" placeholder="Endereço" [(ngModel)]="prestador.endereco">
+          <input type="text" placeholder="Valor do Km(R$)" [(ngModel)]="prestador.preco_km">
+          <input type="text" placeholder="Cole aqui a url da sua foto" [(ngModel)]="prestador.picture">
+
+        </div>
+        <div class="camera" style="display: none;">
+          <button>
+            <ion-icon name="camera" style="color: #fff; font-size: 30px; margin-top: 8px;"></ion-icon>
+          </button>
+        </div>
+
+
+        <button class="ion-margin-top" (click)="registerPres()" color="light" expand="block">Finalizar</button>
+
+      </div>
+    </div>
+  </div>
+</ion-content>

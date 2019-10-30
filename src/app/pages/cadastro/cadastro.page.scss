@@ -1,0 +1,45 @@
+.logo{
+    margin-top: 30px;
+}
+.logo img{
+    padding: 5%;
+}
+.dark{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background:var( --ion-color-primary);
+
+    
+}
+.form input{
+    width: 90%;
+    height: 40px;
+    border: 1px solid #00a6ff!important;
+    margin-bottom: 10px;
+    text-indent: 10px;
+    background-color: transparent;
+    color: white;
+}
+.form input::placeholder{
+    text-indent: 10px;
+    opacity: .6;
+    color: white;
+    font-weight: 300;
+}
+.form input:focus{
+    text-indent: 10px;
+    opacity: .7;
+    color: white;
+    font-weight: 300;
+}
+button{
+    width: 90%;
+    height: 40px;
+    background-color: #00a6ff;
+    color: white;
+    border-radius: 5px;
+}
+
